@@ -21,7 +21,7 @@ A full-stack recipe sharing platform where users can upload, search, and interac
 | Layer     | Technology              |
 |-----------|--------------------------|
 | Frontend  | React + Vite + Tailwind |
-| Backend   | Node.js + Express       |
+| Backend   | Node.js + Express + mongodb      |
 | Database  | MongoDB Atlas           |
 | Auth      | JWT                     |
 | CI/CD     | Netlify (frontend), Render (backend) |
