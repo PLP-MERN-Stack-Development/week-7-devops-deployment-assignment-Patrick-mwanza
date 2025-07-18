@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: recipe-api
+    env: node
+    buildCommand: pnpm install
+    startCommand: pnpm run dev
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://munyaopatrick:V1KrPcqr0BqQMkgz@cluster0.8gno6sv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: NODE_ENV
+        value: production
