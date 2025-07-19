@@ -5,7 +5,7 @@ import io from 'socket.io-client';
 import { useDispatch } from 'react-redux';
 import { addFavorite } from '../redux/recipeSlice';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://recipe-sharing-app-eqri.onrender.com');
 
 function RecipeDetail() {
   const { id } = useParams();
@@ -15,7 +15,7 @@ function RecipeDetail() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/recipes`).then((res) => {
+    axios.get(`https://recipe-sharing-app-eqri.onrender.com/api/recipes`).then((res) => {
       const found = res.data.find((r) => r._id === id);
       setRecipe(found);
     });
