@@ -14,7 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'https://recipesharinapp.netlify.app',
+    origin: '',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }
 });
