@@ -5,13 +5,13 @@ function AdminPage() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/recipes').then((res) => {
+    axios.get('https://recipe-sharing-app-eqri.onrender.com/api/recipes').then((res) => {
       setRecipes(res.data.filter((r) => !r.isApproved));
     });
   }, []);
 
   const handleApprove = (id) => {
-    axios.put(`http://localhost:5000/api/recipes/${id}/approve`, {}, {
+    axios.put(`https://recipe-sharing-app-eqri.onrender.com/api/recipes/${id}/approve`, {}, {
       headers: { Authorization: localStorage.getItem('token') },
     }).then(() => {
       setRecipes((prev) => prev.filter((r) => r._id !== id));
