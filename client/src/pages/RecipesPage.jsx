@@ -11,7 +11,7 @@ export default function RecipesPage() {
   useEffect(() => {
     async function fetchRecipes() {
       try {
-        const res = await axios.get('http://localhost:5000/api/recipes');
+        const res = await axios.get('https://recipe-sharing-app-eqri.onrender.com/api/recipes');
         setRecipes(res.data);
       } catch (err) {
         setError('Failed to fetch recipes');
