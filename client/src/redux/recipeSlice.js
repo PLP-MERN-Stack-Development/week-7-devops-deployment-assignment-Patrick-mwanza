@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchRecipes = createAsyncThunk('recipes/fetch', async () => {
-  const res = await axios.get('http://localhost:5000/api/recipes');
+  const res = await axios.get('https://recipe-sharing-app-eqri.onrender.com/api/recipes');
   return res.data;
 });
 
